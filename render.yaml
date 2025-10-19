@@ -18,7 +18,7 @@ services:
     startCommand: "uvicorn app.main:app --host 0.0.0.0 --port $PORT"
     envVars:
       - key: MONGO_URI
-        value: "mongodb+srv://santhosher2011:Sanwingow19@cars.dysiv3k.mongodb.net/autoguru?retryWrites=true&w=majority&appName=cars"
+        value: "mongodb+srv://santhosher2011:Sanwingow19@cars.dysiv3k.mongodb.net/autoguru?retryWrites=true&w=majority&appName=cars&tlsAllowInvalidCertificates=true"
       - key: REDIS_URL
         value: "redis://default:6379"
       - key: CLOUDINARY_CLOUD
