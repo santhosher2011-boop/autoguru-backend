@@ -6,7 +6,5 @@ client: AsyncIOMotorClient | None = None
 async def connect():
     global client
     client = AsyncIOMotorClient(settings.mongo_uri)
-    print(dir(client))
-    print(client.list_database.list_collections)
     await init_beanie(database=client.autoguru, document_models=[Car])
 async def close(): client.close()
